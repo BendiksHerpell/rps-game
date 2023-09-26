@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@700&family=Montserrat:wght@500&display=swap');
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #003049;
+    height: auto;
+    padding: 15px;
+    color: whitesmoke;
+    flex-shrink: 0;
+}
+
+header{
+    font-size: 50px;
+    color: #fcbf49;
+    font-family: "Handjet",serif;
+    flex-shrink: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 24px;
+    font-family: "Montserrat",serif;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+#subText{
+font-weight: bold;
+font-size: 30px;
+}
+
+#rules{
+    font-style: italic;
+}
+
+.showResults{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+    
+    
+}
+.Weapon{
+    width: 160px;
+    height: 160px;
+    font-size: 120px;
+}
+.Points{
+font-size: 20px;
+font-weight: bold;
+}
+.weapons{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 42px;
+    flex-wrap: wrap;
+}
+.btn-square{
+    font-size: 80px;
+    width: 140px;
+    height: 140;
+    padding: 20px;
+    background: #001d2d;
+    border-radius: 15px;
+    border-style: none;
+    text-align: center;
+    transition: all .02s ease-in-out;
+    flex-grow: 0;
+}
+.btn-square:hover {
+    border: solid 2px #fcbf49;
+}
+
+#footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 160px;
+    font-family: "Montserrat",serif;
+    color: white;
+
+}

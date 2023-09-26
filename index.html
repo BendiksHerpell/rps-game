@@ -4,79 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Rock-Paper-Scissors</h1>
-    <p>Press the button to starr!</p><br>
-    <button type="button" onclick="playRound()">Shoot!</button>
-    <script>
-    const choice=prompt('Enter your pick!')
-    const picks = ['Rock','Paper','Scissor'];
-    const pick = picks[Math.floor(Math.random()*picks.length)];
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    
-    
-    function getComputerChoice() {
-    const picks = ['Rock','Paper','Scissor'];
-    console.log('Computer chose: '+ pick);
-    }
+    <header><h1>ROCK-PAPER-SCISSORS</h1></header>
+    <main>
+        <div class="text">
+        <div id="subText">Choose your weapon!</div>
+        <div id="rules">First to five wins!</div>
+        </div>
 
-    function getUserChoice() {
-        if( !['rock','paper','scissor'].includes(choice.toLowerCase())) {
-        console.log('Wrong input. Choose between "Rock", "Paper" or "Scissor". ');
-        }else{
-            console.log('You chose: '+ choice);
-        }
-    }
-    function whoWon() {
-        if(choice.toLowerCase() === 'rock') {
-            if(pick == "Rock"){
-                console.log('Draw!');
-            }else if (pick==='Paper') {
-                console.log('Computer won! You lost!');
-                scoreComputer = scoreComputer +1;
-            }else if(pick=='Scissor'){
-                console.log('You won! Computer lost!');
-                scorePlayer = scorePlayer+1;
-            }
-        }else if(choice.toLowerCase() === 'paper'){
-            if(pick == "Paper"){
-                console.log('Draw!');
-            }else if (pick==='Scissor') {
-                console.log('Computer won! You lost!');
-                scoreComputer = scoreComputer +1;
-            }else if(pick=='Rock'){
-                console.log('You won! Computer lost!');
-                scorePlayer = scorePlayer+1;
-            }
-        }else if(choice.toLowerCase() ==='scissor'){
-            if(pick == 'Scissor'){
-                console.log('Draw!');
-            }else if (pick==='Rock') {
-                console.log('Computer won! You lost!');
-                scoreComputer = scoreComputer +1;
-            }else if(pick=='Paper'){
-                console.log('You won! Computer lost!');
-                scorePlayer = scorePlayer+1;
-            }
-        }
-    }
+        <div class="showResults">
+            
+            <div class="playerStats">
+                <div class="Weapon" id="playerWeapon">?</div>
+                <div class="Points" id="playerPoints">Player: 0 </div>
+            </div>
+            <div class="computerStats">
+                <div class="Weapon" id="computerWeapon">?</div>
+                <div class="Points" id="computerPoints">Computer: 0 </div>
+            </div>
 
-    function playRound() {
-      for(let i = 0; i < 5; i++) {
-        const choice=prompt('Enter your pick!')
-        getComputerChoice();
-        getUserChoice();
-        whoWon(); 
-        i= i+1;
-        console.log('Your Score: '+ scorePlayer);
-        console.log('Computers Score: '+ scoreComputer);
-        
-        }
-    }
+        </div>
+        <div class="weapons">
+            <button class="btn-square" id="rock">👊</button>
+            <button class="btn-square" id="paper">✋</button>
+            <button class="btn-square" id="scissor">✌️</button>
+        </div>
+    </main>
 
-    
-    </script>
+    <!-- <div id="footer">Copyright © bendiksherpell</div> -->
+<script src="./script.js"></script>
 </body>
 </html>
